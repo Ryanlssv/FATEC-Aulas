@@ -1,0 +1,117 @@
+EX1:
+
+import java.io.IOException;
+import java.lang.Math;
+import java.util.Scanner;
+
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner entrada = new Scanner(System.in);
+        double R,S,X,x1,y1,Y,x2,y2,P1,P2;
+        x1 = entrada.nextDouble();
+        x2 = entrada.nextDouble();
+        X = x2 - x1;
+        y1 = entrada.nextDouble();
+        y2 = entrada.nextDouble();
+        Y = y2 - y1;
+        
+        P1= X * X;
+        P2= Y * Y;
+        
+        S = P1 + P2;
+        R = Math.sqrt(S);
+        System.out.printf("%.4f",R);
+            
+    }
+ 
+}
+
+
+
+EX2:
+
+import java.io.IOException;
+import java.util.Scanner;
+
+
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        double X ,H , VM, F ;
+            Scanner entrada = new Scanner(System.in);
+            
+            H = entrada.nextDouble();
+            VM = entrada.nextDouble();
+            
+        X = H * VM;
+        F= X / 12;
+        
+       System.out.printf("%.3f",F);
+        
+        
+ 
+    }
+ 
+}
+
+
+
+Ex3:
+
+ import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	     double X , Y , F, V;
+	     Scanner entrada = new Scanner(System.in);
+	        do{
+            
+            
+            X = entrada.nextDouble();
+            Y = entrada.nextDouble();
+            
+            if( X < Y ){
+
+                 System.out.printf( "Crecente\n" );
+            }else{
+                if(X>Y){
+                    System.out.printf( "Decrecente\n" );
+                }
+            }
+            
+        } while(X != Y) ;
+	}
+}
+
+
+Ex4: 
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+       Scanner entrada = new Scanner(System.in);
+       int senha, x;
+       
+       senha = 2002;
+       
+       do {
+            x = entrada.nextInt();
+            
+            if( x == senha  ){
+                System.out.printf("Acesso Permitido");
+            }else{
+                System.out.printf("Senha Invalida\n");
+            }
+           
+       }while( x != senha);
+ 
+    }
+ 
+}
