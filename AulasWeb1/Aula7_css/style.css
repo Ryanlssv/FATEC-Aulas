@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "Chalet";
+    src: url(./ChaletComprime.ttf);
+}
+
 .div1{
     width: 40%;
     height: 40%;
@@ -8,8 +15,10 @@
     position: absolute;
 }
 
-.div1 h1{
+.text{
+    display: list-item;
+    list-style: none;
     text-align: center;
-    margin-top: 20%;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 7%;
 }
+
