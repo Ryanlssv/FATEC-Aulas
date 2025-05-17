@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color: burlywood;
+
+}
+
+@media (max-width: 600px){
+    body{
+        background-color: aqua;
+    }
+}
+
+@media print{
+    
+}
