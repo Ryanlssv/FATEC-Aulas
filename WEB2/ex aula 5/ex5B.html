@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    
+<form name="val">
+    <input name="n1" type="number">
+    <input name="n2" type="number">
+    <input type="submit" onclick="AlerC()">
+</form>
+
+</body>
+    <script>
+            a = document.val.n1.value;
+            b = document.val.n2.value;
+
+            function AlerC(){
+            if( a > b) {
+               alert ("A e maior que B, " + a + " > "+ b)
+            }else{
+                   alert("B e maior que A, "+ b + ' > ' + a)
+            }
+            }
+
+    </script>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <body>
+         <form name="calculo">
+            <input name="n1" placeholder="digite o 1 numero"  type="number">
+            <input name="n2" placeholder="digite o 2 numero"  type="number">
+            <input onclick="calcular()" type="submit">
+            <select name="op" >
+                <option name="opc" value="+">+</option>
+                <option name="opc" value="-">-</option>
+                <option name="opc" value="*">*</option>
+            </select>
+         </form>
+         <script>
+                function calcular(){
+                nu1 = document.calculo.n1.value;
+                a = parseFloat(nu1);
+                nu2 = document.calculo.n2.value;
+                b = parseFloat(nu2);
+                c = document.calculo.op.opc.value;
+
+                switch(c){
+                    case "+" :
+                        cal = a + b;
+                        document.write("A soma de ",nu1," + ",nu2," = " ,cal);
+                    break;
+                    case "-":     
+                        cal = a - b;
+                        document.write("A Sub de ",nu1," - ",nu2," = " ,cal);
+                    break;
+                    case "*" :
+                        cal = a * b;
+                        document.write("A Mul de ",nu1," * ",nu2," = " ,cal);
+                    break;
+                };
+                
+                
+            }
+         </script>
+    </body>
+</html>

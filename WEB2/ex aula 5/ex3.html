@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <form name="calculo">
+            <input name="n1" placeholder="digite o 1 numero"  type="number">
+            <input name="n2" placeholder="digite o 2 numero"  type="number">
+            <input onclick="calcular()" type="submit">
+        </form>
+
+        <script>
+            function calcular(){
+                nu1 = document.calculo.n1.value;
+                a = parseFloat(nu1);
+                nu2 = document.calculo.n2.value;
+                b = parseFloat(nu2)
+                cal = a + b;
+                document.write("A soma de ",nu1," + ",nu2," = " ,cal)
+            };
+        </script>
+    </body>
+</html>
