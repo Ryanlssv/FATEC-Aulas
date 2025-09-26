@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ocorrências</title>
+</head>
+<body>
+  <script>
+    let a  = 'Este é um texto que contém um texto com a palavra texto';
+    let b = 'texto';
+
+    let pos = a.indexOf(b); 
+    while (pos !== -1) {
+      document.write(pos+ ' ');
+      pos = a.indexOf(b, pos + 1);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de E-mail</title>
+</head>
+<body>
+  <h2>Digite seu e-mail:</h2>
+  <form id="formEmail">
+    <input type="email" id="email" placeholder="exemplo@dominio.com" required>
+    <button type="submit">Mostrar Domínio</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById("formEmail").addEventListener("submit", function(event) {
+      event.preventDefault(); // evita recarregar a página
+
+      const email = document.getElementById("email").value;
+      const posicaoArroba = email.indexOf("@");
+
+      if (posicaoArroba !== -1) {
+        const dominio = email.substring(posicaoArroba + 1, email.length);
+        document.getElementById("resultado").innerText = "O domínio do e-mail é: " + dominio;
+      } else {
+        document.getElementById("resultado").innerText = "Digite um e-mail válido.";
+      }
+    });
+  </script>
+</body>
+</html>
+
