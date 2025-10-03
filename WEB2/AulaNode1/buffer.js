@@ -1,0 +1,5 @@
+var buffer = new Buffer.from("Liza")
+buffer.write("Khan")
+console.log(buffer.toJSON())
+console.log(buffer)
+console.log(buffer.toString())
