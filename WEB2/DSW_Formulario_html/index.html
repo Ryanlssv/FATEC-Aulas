@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormulÁrio de cadastro</title>
+</head>
+<body>
+    <br>
+    <main style="margin-left: 40%;" >
+        <h1><strong>FORMULÁRIO DE INSCRIÇÃO</strong></h1>
+        <form style="text-align: justify;" action="#" method="post">
+            <!-- Campo para inserir o nome -->
+            <label for="Nome">Nome: </label>
+            <input required id="Nome" type="text"><br><br>
+        
+            <!-- Campo para inserir o email -->
+            <label for="Email">Email: </label>
+            <input required id="Email" type="email"><br><br>
+        
+            <!-- Campo para inserir o telefone -->
+            <label for="Tel">Telefone:</label>
+            <input required id="Tel" type="tel"><br><br>
+        
+            <!-- Campo para inserir a data de nascimento -->
+            <label for="DataNasc">Data de nascimento: </label>
+            <input required id="DataNasc" type="date"><br><br>
+        
+            <!-- Campo para selecionar o gênero -->
+            <label for="G">Gênero: </label>
+            <input required id="M" name="G" type="radio">
+            <label for="M">Masculino </label>
+            <input required name="G" id="F" value="F" type="radio">
+            <label for="F">Feminino </label><br><br>
+        
+            <!-- Campo para selecionar o tipo de inscrição -->
+            <label for="tipo_inscricao">Tipo de Inscrição:</label>
+            <select id="tipo_inscricao" name="tipo_inscricao" required>
+                <option value="palestrante">Palestrante</option>
+                <option value="participante">Participante</option>
+                <option value="voluntario">Voluntário</option>
+            </select><br><br>
+        
+            <!-- Campo para inserir uma mensagem -->
+            <label for="Mensagem">Mensagem:</label><br>
+            <textarea name="Mensagem" id="Mensagem" rows="4" cols="50" maxlength="200"></textarea><br><br>
+        
+            <!-- Botão para enviar o formulário -->
+            <input required type="submit"><br><br>
+        
+            <!-- Botão para limpar o formulário -->
+            <button type="reset">Limpar</button>
+        </form>
+        
+    </main> 
+</body>
+</html>
