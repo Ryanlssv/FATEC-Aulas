@@ -7,8 +7,8 @@ exports.getAllTodos = function(req, res) {
     });
 }; // Adicionada a chave de fechamento aqui
 
-exports.getTodoById = function(req, res) { // Corrigido o nome da função
-    Todo.getTodoById(req.params.id, (err, todo) => { // Adicionada a seta =>
+exports.getTodoById = function(req, res) {
+    Todo.getTodoById(req.params.id, (err, todo) => { 
         if (err) throw err;
         res.json(todo);
     });
