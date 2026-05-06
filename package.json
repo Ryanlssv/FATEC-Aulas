@@ -1,0 +1,23 @@
+{
+  "name": "fatec-aulas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryanlssv/FATEC-Aulas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ryanlssv/FATEC-Aulas/issues"
+  },
+  "homepage": "https://github.com/Ryanlssv/FATEC-Aulas#readme"
+}
