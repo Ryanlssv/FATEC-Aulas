@@ -1,0 +1,239 @@
+/* ==== Reset básico ==== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== Tipografia ==== */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* ==== Layout ==== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==== Header ==== */
+header {
+  background: #1e40af; /* azul escuro */
+  color: #fff;
+  padding: 1rem 0;
+}
+header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+/* ==== Nav ==== */
+nav {
+  background: #2563eb; /* azul claro */
+}
+nav .nav-btn {
+  color: #fff;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  transition: background 0.2s;
+}
+nav .nav-btn:hover,
+nav .nav-btn.active {
+  background: #1d4ed8;
+}
+
+/* ==== Sections – visibilidade ==== */
+.section {
+  display: none;
+  padding: 1.5rem 0;
+}
+.section.active {
+  display: block;
+}
+.section.hidden {
+  display: none !important;
+}
+
+/* ==== Cards de Dashboard ==== */
+.card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: .5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,.07);
+}
+.card h3 {
+  font-size: .95rem;
+  color: #555;
+  margin-bottom: .4rem;
+}
+.card p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* ==== Tabelas ==== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+thead {
+  background: #e5e7eb;
+}
+th, td {
+  padding: .75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #d1d5db;
+}
+tr:hover td {
+  background: #f3f4f6;
+}
+button.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  padding: .5rem .9rem;
+  border-radius: .35rem;
+  border: none;
+  cursor: pointer;
+  transition: background .2s;
+}
+button.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* ==== Modal ==== */
+#modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+#modal.flex {
+  display: flex;
+}
+#modal > div {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+#modal h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* ==== Formulários ==== */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ==== Botões gerais ==== */
+button {
+  cursor: pointer;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
+}
+button:active {
+  transform: scale(0.98);
+}
+.bg-blue-600 {
+  background-color: #2563eb;
+  color: #fff;
+}
+.bg-blue-600:hover {
+  background-color: #1d4ed8;
+}
+.bg-green-600 {
+  background-color: #16a34a;
+  color: #fff;
+}
+.bg-green-600:hover {
+  background-color: #15803d;
+}
+.text-blue-600 {
+  color: #2563eb;
+}
+.text-red-600 {
+  color: #dc2626;
+}
+.text-blue-600:hover,
+.text-red-600:hover {
+  text-decoration: underline;
+}
+
+/* ==== Chat messages ==== */
+#chat-messages {
+  scroll-behavior: smooth;
+}
+#chat-messages > div {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+/* ==== Grid para utensílios ==== */
+#lista-utensilios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* ==== Responsividade ==== */
+@media (max-width: 768px) {
+  nav .flex {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .card {
+    padding: 1rem;
+  }
+  #modal > div {
+    width: 95%;
+    padding: 1rem;
+  }
+}
+
+/* ==== Print styles para documentos ==== */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area, .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}

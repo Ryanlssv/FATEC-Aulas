@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Condomínio</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-blue-900 text-white shadow-lg">
+            <div class="container mx-auto px-4 py-4">
+                <h1 class="text-2xl font-bold">Sistema de Condomínio</h1>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-blue-800 text-white">
+            <div class="container mx-auto px-4">
+                <div class="flex space-x-4 overflow-x-auto">
+                    <button onclick="showSection('dashboard')" class="nav-btn px-4 py-2 hover:bg-blue-700 rounded" data-section="dashboard">Dashboard</button>
+                    <button onclick="showSection('condominos')" class="nav-btn px-4 py-2 hover:bg-blue-700 rounded" data-section="condominos">Condôminos</button>
+                    <button onclick="showSection('unidades')" class="nav-btn px-4 py-2 hover:bg-blue-700 rounded" data-section="unidades">Unidades</button>
+                    <button onclick="showSection('garagens')" class="nav-btn px-4 py-2 hover:bg-blue-700 rounded" data-section="garagens">Garagens</button>
+                    <button onclick="showSection('sorteio')" class="nav-btn px-4 py-2 hover:bg-blue-700 rounded" data-section="sorteio">Sorteio</button>
+                    <button onclick="showSection('chat')" class="nav-btn px-4 py-2 hover:bg-blue-700 rounded" data-section="chat">Chat</button>
+                    <button onclick="showSection('cozinha')" class="nav-btn px-4 py-2 hover:bg-blue-700 rounded" data-section="cozinha">Cozinha</button>
+                    <button onclick="showSection('documentos')" class="nav-btn px-4 py-2 hover:bg-blue-700 rounded" data-section="documentos">Documentos</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-6">
+
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="section">
+                <h2 class="text-xl font-semibold mb-4">Dashboard</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                    <div class="card">
+                        <h3>Total de Condôminos</h3>
+                        <p id="total-condominos">0</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total de Unidades</h3>
+                        <p id="total-unidades">0</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total de Garagens</h3>
+                        <p id="total-garagens">0</p>
+                    </div>
+                    <div class="card">
+                        <h3>Garagens Disponíveis</h3>
+                        <p id="garagens-disponiveis">0</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="font-semibold mb-2">Ações Rápidas</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="openModal('condomino')" class="btn-primary">Novo Condômino</button>
+                        <button onclick="openModal('unidade')" class="btn-primary">Nova Unidade</button>
+                        <button onclick="openModal('garagem')" class="btn-primary">Nova Garagem</button>
+                        <button onclick="openModal('utensilio')" class="btn-primary">Novo Utensílio</button>
+                        <button onclick="showSection('sorteio')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Realizar Sorteio</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Condôminos Section -->
+            <section id="condominos" class="section">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold">Condôminos</h2>
+                    <button onclick="openModal('condomino')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Novo Condômino</button>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Unidade</th>
+                                <th>E-mail</th>
+                                <th>Telefone</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-condominos">
+                            <!-- Dados carregados via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Unidades Section -->
+            <section id="unidades" class="section">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold">Unidades</h2>
+                    <button onclick="openModal('unidade')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Nova Unidade</button>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th>Número</th>
+                                <th>Bloco</th>
+                                <th>Andar</th>
+                                <th>Condômino</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-unidades">
+                            <!-- Dados carregados via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Garagens Section -->
+            <section id="garagens" class="section">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold">Garagens</h2>
+                    <button onclick="openModal('garagem')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Nova Garagem</button>
+                </div>
+                <div class="bg-white rounded-lg shadow overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th>Número</th>
+                                <th>Bloco</th>
+                                <th>Andar</th>
+                                <th>Tipo</th>
+                                <th>Disponível</th>
+                                <th>Condômino</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-garagens">
+                            <!-- Dados carregados via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Sorteio Section -->
+            <section id="sorteio" class="section">
+                <h2 class="text-xl font-semibold mb-4">Sorteio de Garagens</h2>
+                <div class="bg-white p-6 rounded-lg shadow max-w-2xl">
+                    <p class="mb-4 text-gray-700">
+                        O sorteio distribuirá aleatoriamente as garagens disponíveis para os condôminos elegíveis.
+                        Síndico e Subsíndico possuem garagens fixas. Condôminos com apenas um carro também possuem garagem pré-determinada.
+                    </p>
+                    <button onclick="realizarSorteio()" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 text-lg font-semibold">
+                        Realizar Sorteio
+                    </button>
+                    <div id="resultado-sorteio" class="hidden mt-6">
+                        <h3 class="font-semibold text-lg mb-2">Resultados do Sorteio:</h3>
+                        <div id="lista-resultados" class="space-y-2">
+                            <!-- Resultados aqui -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Section -->
+            <section id="chat" class="section">
+                <h2 class="text-xl font-semibold mb-4">Chat do Condomínio</h2>
+                <div class="bg-white rounded-lg shadow p-4 max-w-3xl">
+                    <div id="chat-messages" class="h-96 overflow-y-auto mb-4 p-3 border rounded bg-gray-50">
+                        <!-- Mensagens carregadas via JS -->
+                    </div>
+                    <div class="flex gap-2">
+                        <input type="text" id="chat-input" placeholder="Digite sua mensagem..." class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button onclick="enviarMensagem()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Enviar</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cozinha Section -->
+            <section id="cozinha" class="section">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold">Utensílios da Cozinha</h2>
+                    <button onclick="openModal('utensilio')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Novo Utensílio</button>
+                </div>
+                <div id="lista-utensilios" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Utensílios carregados via JS -->
+                </div>
+            </section>
+
+            <!-- Documentos Section -->
+            <section id="documentos" class="section">
+                <h2 class="text-xl font-semibold mb-4">Documentos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-semibold text-lg mb-2">Reserva de Salão de Festas</h3>
+                        <p class="text-gray-600 mb-4">Gera um documento para reserva do salão de festas do condomínio.</p>
+                        <button onclick="gerarDocumento('reserva-salao')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Gerar Documento</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-semibold text-lg mb-2">Relação de Utensílios</h3>
+                        <p class="text-gray-600 mb-4">Gera um relatório com todos os utensílios disponíveis na cozinha do salão de festas.</p>
+                        <button onclick="gerarDocumento('relatorio-utensilios')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Gerar Relatório</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Modal -->
+        <div id="modal" class="hidden">
+            <div>
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="modal-title" class="text-lg font-semibold"></h3>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+                </div>
+                <div id="modal-content">
+                    <!-- Conteúdo do modal será inserido via JS -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>
