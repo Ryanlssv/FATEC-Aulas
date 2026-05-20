@@ -1,0 +1,18 @@
+Funcionalidades:
+  - Autenticação JWT com bcrypt
+  - CRUD usuários (protegido)
+  - CRUD tarefas (protegido, filtragem por status/prioridade)
+  - Validações de dados
+  - Hash de senhas automático
+
+  Para rodar:
+  npm install
+  * MongoDB precisa estar rodando
+  npm start
+
+  Endpoints principais:
+  - POST /api/auth/registrar - Criar usuário
+  - POST /api/auth/login - Login (retorna token)
+  - GET /api/auth/perfil - Perfil (Bearer token)
+  - GET /api/tasks - Listar tarefas
+  - POST /api/tasks - Criar tarefa
