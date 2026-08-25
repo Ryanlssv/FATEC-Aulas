@@ -1,0 +1,13 @@
+nav{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+a{
+    color: black;
+    font-size: 30px;
+}
