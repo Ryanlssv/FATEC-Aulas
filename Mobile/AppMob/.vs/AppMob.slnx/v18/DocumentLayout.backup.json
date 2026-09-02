@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\FATEC ZONA LESTE\\Downloads\\Aula4\\Aula4\\AppMob\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E77C3662-94D7-62F1-EAC7-BDBBEDFA7A9A}|MauiAppAula4\\MauiAppAula4.csproj|c:\\users\\fatec zona leste\\downloads\\aula4\\aula4\\appmob\\mauiappaula4\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E77C3662-94D7-62F1-EAC7-BDBBEDFA7A9A}|MauiAppAula4\\MauiAppAula4.csproj|solutionrelative:mauiappaula4\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E77C3662-94D7-62F1-EAC7-BDBBEDFA7A9A}|MauiAppAula4\\MauiAppAula4.csproj|c:\\users\\fatec zona leste\\downloads\\aula4\\aula4\\appmob\\mauiappaula4\\mainpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{E77C3662-94D7-62F1-EAC7-BDBBEDFA7A9A}|MauiAppAula4\\MauiAppAula4.csproj|solutionrelative:mauiappaula4\\mainpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E77C3662-94D7-62F1-EAC7-BDBBEDFA7A9A}|MauiAppAula4\\MauiAppAula4.csproj|c:\\users\\fatec zona leste\\downloads\\aula4\\aula4\\appmob\\mauiappaula4\\mod\\doisparametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E77C3662-94D7-62F1-EAC7-BDBBEDFA7A9A}|MauiAppAula4\\MauiAppAula4.csproj|solutionrelative:mauiappaula4\\mod\\doisparametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoisParametro.cs",
+              "DocumentMoniker": "C:\\Users\\FATEC ZONA LESTE\\Downloads\\Aula4\\Aula4\\AppMob\\MauiAppAula4\\Mod\\DoisParametro.cs",
+              "RelativeDocumentMoniker": "MauiAppAula4\\Mod\\DoisParametro.cs",
+              "ToolTip": "C:\\Users\\FATEC ZONA LESTE\\Downloads\\Aula4\\Aula4\\AppMob\\MauiAppAula4\\Mod\\DoisParametro.cs",
+              "RelativeToolTip": "MauiAppAula4\\Mod\\DoisParametro.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T13:29:49.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\FATEC ZONA LESTE\\Downloads\\Aula4\\Aula4\\AppMob\\MauiAppAula4\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MauiAppAula4\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\FATEC ZONA LESTE\\Downloads\\Aula4\\Aula4\\AppMob\\MauiAppAula4\\MainPage.xaml.cs",
+              "RelativeToolTip": "MauiAppAula4\\MainPage.xaml.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAwwDQAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T11:29:46.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\FATEC ZONA LESTE\\Downloads\\Aula4\\Aula4\\AppMob\\MauiAppAula4\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MauiAppAula4\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\FATEC ZONA LESTE\\Downloads\\Aula4\\Aula4\\AppMob\\MauiAppAula4\\MainPage.xaml",
+              "RelativeToolTip": "MauiAppAula4\\MainPage.xaml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-08-26T11:28:56.248Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

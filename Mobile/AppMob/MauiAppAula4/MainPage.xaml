@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppAula4.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <Label Text="Número 1" />
+            <Entry Placeholder="" x:Name="txtNum1"/>
+            <Label Text="Número 2" />
+            <Entry Placeholder="" x:Name="txtNum2"/>
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button
+                    x:Name="btnCalcSoma"
+                    Text="Somar"
+                    Clicked="btnSoma_Clicked" />
+                <Button
+                    x:Name="btnCalcSubtrair"
+                    Text="Subtrair"
+                    Clicked="btnSub_Clicked" />
+                <Button
+                    x:Name="btnCalcMult"
+                    Text="Multiplicar"
+                    Clicked="btnMult_Clicked" />
+                <Button
+                    x:Name="btnCalcDiv"
+                    Text="Dividir"
+                    Clicked="btnDiv_Clicked" />
+            </HorizontalStackLayout>
+            <Label Text="Resultado: " x:Name="lblRes" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
